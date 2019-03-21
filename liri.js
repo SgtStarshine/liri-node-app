@@ -13,11 +13,11 @@ runLiRi(command, input);
 function runLiRi(command, input) {
     switch (command) {
         case 'concert-this':
-            input === undefined ? runBandsInTown('twenty one pilots') :
+            input === undefined ? runBandsInTown('arsena') :
                 runBandsInTown(input);
             break;
         case 'spotify-this-song':
-            input === undefined ? runSpotify("can't hold us") :
+            input === undefined ? runSpotify("masters of war") :
                 runSpotify(input);
             break;
         case 'movie-this':
