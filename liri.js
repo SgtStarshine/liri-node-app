@@ -6,9 +6,11 @@ var fs = require('fs');
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
 var command = process.argv[2];
+
 if (!process.argv[3] === undefined) {
     var input = process.argv.slice(3).join(' ');
 }
+
 runLiRi(command, input);
 function runLiRi(command, input) {
     switch (command) {
@@ -21,7 +23,7 @@ function runLiRi(command, input) {
                 runSpotify(input);
             break;
         case 'movie-this':
-            input === undefined ? runOMDB('matrix') :
+            input === undefined ? runOMDB('the matrix') :
                 runOMDB(input);
             break;
         case 'do-what-it-says':
